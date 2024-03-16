@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState, useEffect } from "react";
 import {
   getPokemonList,
@@ -93,6 +92,14 @@ const App: React.FC = () => {
     setIsModalOpen(false);
   };
 
+  // Apply debounce to setSearchTerm
+  const debouncedSetSearchTerm = debounce(setSearchTerm, 100);
+
+  const handleSearchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchTerm = e.target.value;
+    debouncedSetSearchTerm(newSearchTerm);
+  };
+
   const filteredPokemonList = pokemonList.filter((pokemon) => {
     const lowercaseName = pokemon.name.toLowerCase();
     const lowercaseSearchTerm = searchTerm.toLowerCase();
@@ -112,7 +119,7 @@ const App: React.FC = () => {
           type="text"
           placeholder="Search Pokemon..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleSearchTermChange} 
           className="search-input"
         />
         <select
