@@ -1,0 +1,68 @@
+/* App.css */
+
+.main-container {
+  background-color: #00224d;
+  color: #ffffff;
+  height: 100vh;
+  padding: 20px;
+}
+h1{
+  color:#FF204E;
+}
+.search-filter-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color:black;
+}
+
+.filter-select {
+   border: 2px solid #A0153E;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #FF204E;
+  color: #FFFFFF;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pokemon-card {
+  background-color: #5d0e41;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.pokemon-name {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.open-modal-button {
+  background-color: #ff204e;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-modal-button:hover {
+  background-color: #a0153e;
+}
